@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+$mt:5px;
+$bgColor: #ffdf00;
+$color:#2FF3E0;
+*{
+ padding:0px;
+ margin:0px;
+}
+button{
+    background-color: $bgColor !important;
+    margin-top: $mt !important;
+}
+.mat-mini-fab{
+    margin-left: 15px !important;
+}
+.myNotes{
+    margin-left: 10px;
+    margin-top: $mt;
+}
+.example-full-width {
+    width: 100%;
+  }
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+.example-margin {
+    margin: 0 10px;
+}
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: $color !important;
+}
+.close.mat-button {
+    position: absolute;
+    margin-left:110px;
+    background: none !important;
+    border: none;
+}
+.mat-stroked-button{
+    margin-left: 250px !important;
+}
+.mat-card{
+    background-color: $bgColor !important;
+    margin-top: 10px;
+}
+.mat-card-subtitle{
+    display: flex !important;
+    flex-direction: row !important;
+}
+.mat-card-title{
+    font-size: 20px !important;
+}
+.date{
+    margin-left: 20px;
+}
+.search{
+    width:50%;
+    margin-left: 300px;
+    margin-top:10px;
+}
+.delete,.edit{
+  display: inline !important;
+  float: right !important;
+  margin-right: 30px;
+  height: 0px !important;
+}
+

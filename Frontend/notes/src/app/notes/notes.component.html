@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-mini-fab (click)="openDialog(false)">
+      <mat-icon>add</mat-icon>
+    </button>
+    <span class="myNotes">My Notes</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <span>LOGOUT</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-form-field class="search">
+  <mat-label>Search</mat-label>
+  <input matInput  #input>
+</mat-form-field>
+<div *ngFor="let note of notesData">
+<mat-card>
+  <mat-card-title>{{note.title}}
+      <button class="mat-icon-button delete" (click)="deleteNote(note.id)"><mat-icon>delete</mat-icon></button>
+      <button class="mat-icon-button edit" (click)="editNote(note.id)"><mat-icon>edit</mat-icon></button>
+  </mat-card-title>
+  <mat-card-subtitle>{{note.createdOn | date:'longDate'}}</mat-card-subtitle>
+</mat-card>
+</div>
